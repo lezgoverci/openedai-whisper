@@ -33,7 +33,7 @@ async def whisper(file, response_format: str, **kwargs):
 
         response = {
             "task": kwargs['generate_kwargs']['task'],
-            #"language": "english",
+            "language": "english",
             "duration": chunks[-1]['timestamp'][1],
             "text": result["text"].strip(),
         }
